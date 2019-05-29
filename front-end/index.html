@@ -8,10 +8,13 @@
     <h2>Itens</h2>
     <div class="w3-container w3-display-container w3-padding-16 tamanho">
         <form>
-            <table id="tabela-form" class="tabela"></table>
-            <br><br>
-            <input class="w3-input w3-border" type="number" value="1" name="Adults" min="1" max="6">
-            <input type="submit" id="finalizar_pedido" value="Finalizar Pedido">
+            <div class="padding">
+                <table id="tabela-form" class="tabela"></table>
+            </div>
+            <div class="padding">
+                <input type="submit" id="finalizar_pedido" value="Finalizar Pedido">
+                <button class="w3-button w3-block w3-green w3-left-align" type="submit"><i class="fa fa-search w3-margin-right"></i> Search availability</button>
+            </div>
         </form>
         <table class="tabela">
             <thead>
@@ -24,7 +27,7 @@
         </table>
     </div>
 
-    <script src="js/carrega.js" ></script>
-    <script src="js/form.js" ></script>    
+    <script src="js/carrega.js"></script>
+    <script src="js/form.js"></script>
 </body>
 </html>

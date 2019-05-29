@@ -31,6 +31,8 @@ function montaTdInput(id_tabela) {
     let td = document.createElement("td");
     let input = document.createElement("input");
     input.setAttribute("type","number");
+    input.classList.add("w3-input");
+    input.classList.add("w3-border");
     input.classList.add("input-qtd");
     td.classList.add(id_tabela);
     td.appendChild(input)
