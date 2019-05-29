@@ -2,25 +2,25 @@
 <html lang="pt-br">
     <head>
         <title>Itens</title>
-        <link href="./estilo.css" type = "text/css" rel = "stylesheet"/>
+        <link href="css/estilo.css" type = "text/css" rel = "stylesheet"/>
     </head>
 <body>
     <h2>Itens</h2>
     <div class="w3-container w3-display-container w3-padding-16 tamanho">
-        <form class="form-lista">
-            <table class="tabela-form"></table>
+        <form>
+            <table id="tabela-form" class="tabela"></table>
             <br><br>
-            <!--<input class="w3-input w3-border" type="number" value="1" name="Adults" min="1" max="6">-->
-            <input type="submit" id="adicionar-item" value="Finalizar Pedido">
+            <input class="w3-input w3-border" type="number" value="1" name="Adults" min="1" max="6">
+            <input type="submit" id="finalizar_pedido" value="Finalizar Pedido">
         </form>
-        <table border="1px">
+        <table class="tabela">
             <thead>
                 <tr>
                     <td>Nome</td>
                     <td>Qtde</td>
                 </tr>
             </thead>
-            <tbody class="tabela"></tbody>
+            <tbody id="tabela" class="tabela"></tbody>
         </table>
     </div>
 

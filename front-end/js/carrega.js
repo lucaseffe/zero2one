@@ -19,28 +19,28 @@ function busca(){
     })
 }
 
-function montaTd(dado, classe) {
+function montaTd(dado, id_tabela) {
     let td = document.createElement("td");
-    td.classList.add(classe);
+    td.classList.add(id_tabela);
     td.textContent = dado;
 
     return td;
 }
 
-function montaTdInput(classe) {
+function montaTdInput(id_tabela) {
     let td = document.createElement("td");
     let input = document.createElement("input");
     input.setAttribute("type","number");
     input.classList.add("input-qtd");
-    td.classList.add(classe);
+    td.classList.add(id_tabela);
     td.appendChild(input)
     return td;
 }
 
-function montaTr(item, classe) {
+function montaTr(item, id_tabela) {
     let itemTr = document.createElement("tr");
     itemTr.classList.add("item");
-    if (classe == ".tabela") {
+    if (id_tabela == "#tabela") {
         itemTr.appendChild(montaTd(item.nome, "info-nome"));
         itemTr.appendChild(montaTd(item.qtd, "info-qtd"));
     } else {
@@ -51,9 +51,9 @@ function montaTr(item, classe) {
     return itemTr;
 }
 
-function adicionaItemNaTabela(item, classe) {
-    var itemTr = montaTr(item, classe);
-    var tabela = document.querySelector(classe);
+function adicionaItemNaTabela(item, id_tabela) {
+    var itemTr = montaTr(item, id_tabela);
+    var tabela = document.querySelector(id_tabela);
     tabela.appendChild(itemTr);
 }
 
@@ -65,13 +65,13 @@ function buscaDados (){
                 id: item.id,
                 item: item.item
             };
-            adicionaItemNaTabela(itemObj, ".tabela-form");
+            adicionaItemNaTabela(itemObj, "#tabela-form");
         });
     });
 };
 
-function limpaTabela(classe){
-    document.querySelector(classe).innerHTML = null;
+function limpaTabela(id_tabela){
+    document.querySelector(id_tabela).innerHTML = null;
 }
 
 buscaDados();
