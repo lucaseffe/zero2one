@@ -5,22 +5,21 @@
         <link href="css/estilo.css" type = "text/css" rel = "stylesheet"/>
     </head>
 <body>
-    <h2>Itens</h2>
-    <div class="w3-container w3-display-container w3-padding-16 tamanho">
+    <div class="w3-display-container padding-16 pagina">
+        <h2>Itens</h2>
         <form>
             <div class="padding">
                 <table id="tabela-form" class="tabela"></table>
             </div>
             <div class="padding">
-                <input type="submit" id="finalizar_pedido" value="Finalizar Pedido">
-                <button class="w3-button w3-block w3-green w3-left-align" type="submit"><i class="fa fa-search w3-margin-right"></i> Search availability</button>
+                <button type="submit" id="finalizar_pedido" class="w3-button w3-block w3-green w3-left-align w3-hover-green">Finalizar Pedido</button>
             </div>
         </form>
         <table class="tabela">
             <thead>
                 <tr>
-                    <td>Nome</td>
-                    <td>Qtde</td>
+                    <td class="info-nome">Nome</td>
+                    <td class="info-qtd">Qtde</td>
                 </tr>
             </thead>
             <tbody id="tabela" class="tabela"></tbody>
