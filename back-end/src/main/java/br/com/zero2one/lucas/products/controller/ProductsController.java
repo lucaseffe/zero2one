@@ -27,6 +27,7 @@ public class ProductsController {
     @GetMapping
     public List<Product> get(){
         List<Product> products = new ArrayList<>();
+
         return products;
     }
     @GetMapping("/{id}")
