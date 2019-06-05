@@ -18,7 +18,16 @@ public class ProductsController {
         celular.setName("Moto X");
         celular.setDescription("Novo Moto X2");
         celular.setPrice(1999.99);
+
+
+        Product notebook = new Product();
+        notebook.setId("1B");
+        notebook.setName("Macbook");
+        notebook.setDescription("Novo Macbook");
+        notebook.setPrice(10000.00);
+
         products.put("1A", celular);
+        products.put("1B", notebook);
     }
 
     @GetMapping
