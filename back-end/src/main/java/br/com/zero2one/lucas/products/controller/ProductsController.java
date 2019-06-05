@@ -3,10 +3,7 @@ package br.com.zero2one.lucas.products.controller;
 import br.com.zero2one.lucas.products.model.Product;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @RestController
 @RequestMapping("/products")
@@ -25,10 +22,8 @@ public class ProductsController {
     }
 
     @GetMapping
-    public List<Product> get(){
-        List<Product> products = new ArrayList<>();
-        return products;
-    }
+    public Collection<Product> get(){ return products.values(); }
+
     @GetMapping("/{id}")
     public Product getById(@PathVariable("id") String id){
         return products.get(id);
