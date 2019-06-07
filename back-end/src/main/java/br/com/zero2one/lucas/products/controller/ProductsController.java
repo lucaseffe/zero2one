@@ -1,8 +1,11 @@
 package br.com.zero2one.lucas.products.controller;
 
 import br.com.zero2one.lucas.products.model.Product;
+import br.com.zero2one.lucas.products.repository.ProductRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.Id;
 import java.util.*;
 
 @RestController
@@ -10,31 +13,24 @@ import java.util.*;
 
 public class ProductsController {
 
+    @Autowired
+    private ProductRepository repository;
+
     private Map<String, Product> products = new HashMap<>();
 
-    public ProductsController(){
-        Product celular = new Product();
-        celular.setId("1A");
-        celular.setName("Moto X");
-        celular.setDescription("Novo Moto X2");
-        celular.setPrice(1999.99);
-
-
-        Product notebook = new Product();
-        notebook.setId("1B");
-        notebook.setName("Macbook");
-        notebook.setDescription("Novo Macbook");
-        notebook.setPrice(10000.00);
-
-        products.put("1A", celular);
-        products.put("1B", notebook);
-    }
-
     @GetMapping
-    public Collection<Product> get(){ return products.values(); }
+    public Collection<Product> get(){ return repository.findAll(); }
 
     @GetMapping("/{id}")
     public Product getById(@PathVariable("id") String id){
-        return products.get(id);
+        return repository.findById(id).orElse(null);
     }
+
+    @PostMapping
+    public Product create(@RequestBody Product product){
+        return repository.save(product);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable("id") String id){ repository.deleteById(id); }
 }
