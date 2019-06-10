@@ -3,13 +3,13 @@ package com.zero2one.desafio_2.model;
 import javax.persistence.Column;
 import javax.persistence.Id;
 
-public class Product {
+public class Request {
     @Id
-    @Column(name = "product_id")
+    @Column(name = "request_id")
     private String id;
     @Column(name = "item_id")
     private String item_id;
-    @Column(name = "product_quantity")
+    @Column(name = "request_quantity")
     private Integer quantity;
 
     public String getId() {
