@@ -13,8 +13,6 @@ public class Item {
     private String id;
     @Column(name = "item_name")
     private String name;
-    @Column(name = "item_quantity")
-    private Integer quantity;
 
     public String getId() {
         return id;
@@ -30,13 +28,5 @@ public class Item {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Integer getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
     }
 }

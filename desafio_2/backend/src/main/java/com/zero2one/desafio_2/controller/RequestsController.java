@@ -10,11 +10,13 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+@RestController
+@RequestMapping("/requests")
 public class RequestsController {
     @Autowired
     private RequestRepository repository;
 
-    private Map<String, Request> products = new HashMap<>();
+    private Map<String, Request> requests = new HashMap<>();
 
     @GetMapping
     public Collection<Request> get(){ return repository.findAll(); }
