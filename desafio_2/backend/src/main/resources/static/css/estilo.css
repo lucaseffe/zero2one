@@ -1,0 +1,76 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+.mySlides {display: none}
+.pagina {
+    max-width: 300px;
+    margin: auto;
+    background: white;
+    padding: 10px;
+}
+.botao {
+    padding: 8px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 71%;
+}
+.borda-botao {
+    border: 1px solid #ccc!important;
+}
+.padding-16 {
+    padding-top: 16px!important;
+    padding-bottom: 16px!important;
+}
+.tamanho {
+    z-index:3;
+    width:260px;
+}
+.tabela {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+.tabela td, #tabela th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.tabela tr:nth-child(even){background-color: #f2f2f2;}
+.tabela tr:hover {background-color: #ddd;}
+.tabela thead {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+.padding{padding-bottom: 10px;}
+.w3-green, .w3-hover-green:hover {
+    color: #fff!important;
+    background-color: rgba(37, 21, 255, 0.74)!important;
+}
+.w3-left-align {
+    text-align: left!important;
+}
+.w3-block {
+    display: block;
+    width: 100%;
+}
+.w3-btn, .w3-button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.form-nome, .info-nome {
+    width: 75%;
+}
+.form-qtd, .info-qtd {
+    width: 25%;
+}

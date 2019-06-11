@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Itens</title>
+        <link href="css/estilo.css" type = "text/css" rel = "stylesheet"/>
+    </head>
+<body>
+    <div class="w3-display-container padding-16 pagina">
+        <h2>Novo Item</h2>
+            <table id="tabela-insert" class="padding">
+                <tr>
+                    <td>
+                        <div class="padding">ID</div>
+                        <div class="padding"><input type="number" class="botao borda-botao input-qtd"></div>
+                    </td>
+                    <td>
+                        <div class="padding">Descrição</div>
+                        <div class="padding"><input type="text" class="botao borda-botao input-qtd"></div>
+                    </td>
+                </tr>                
+            </table>
+        <div class="padding">
+            <button type="submit" id="inserir_item" class="w3-button w3-block w3-green w3-left-align w3-hover-green">Inserir Item</button>
+        </div>
+        <h2>Itens</h2>
+        <form>
+            <div class="padding">
+                <table id="tabela-form" class="tabela"></table>
+            </div>
+            <div class="padding">
+                <button type="submit" id="finalizar_pedido" class="w3-button w3-block w3-green w3-left-align w3-hover-green">Finalizar Pedido</button>
+            </div>
+        </form>
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <td class="info-nome">Nome</td>
+                    <td class="info-qtd">Qtde</td>
+                </tr>
+            </thead>
+            <tbody id="tabela" class="tabela"></tbody>
+        </table>
+    </div>
+
+    <script src="js/carrega.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>
