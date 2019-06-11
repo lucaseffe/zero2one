@@ -1,5 +1,7 @@
 package com.zero2one.desafio_2.model;
 
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -10,10 +12,13 @@ import javax.persistence.Table;
 public class Request {
     @Id
     @Column(name = "request_id")
+    @ApiModelProperty("Identificador do pedido")
     private String id;
     @Column(name = "item_id")
+    @ApiModelProperty("Identificador do item")
     private String item_id;
     @Column(name = "request_quantity")
+    @ApiModelProperty("Quantidade de itens")
     private Integer quantity;
 
     public String getId() {
